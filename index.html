@@ -34,6 +34,7 @@
     <link href="signin.css" rel="stylesheet">
   </head>
   <body class="text-center">
+    <div id="tab1" class="tab-content">
     <script type = "text/javascript">
 // Note: Like all Javascript password scripts, this is hopelessly insecure as the user can see 
 //the valid usernames/passwords and the redirect url simply with View Source.  
@@ -54,7 +55,7 @@ break;
 }
 if (valid) {
 alert ("Login was sucessfully processed.  You will be redirected to the members page now.");
-window.location = "index.html#target.html";
+window.location = "#tab2";
 return false;
 }
 var t = " tries";
@@ -77,6 +78,8 @@ return false;
 }
 }
 </script>
+    <ul id="menu">
+      <li><a href="#tab1"></a></li><li><a href="#tab2"></a></li></ul>
 <form name = "myform">
 <div class="form-group">
   <label for="exampleInputEmail1">Email address</label>
@@ -87,5 +90,10 @@ return false;
   <input type="button" class="btn btn-primary" value="Check In" name="Submit" onclick= "validate()"></button>
 </p>
 </form>
+  </div>
+<div id="tab2" class="tab-content"><p>hello</p>
+</div>
+
+
 </body>
 </html>
