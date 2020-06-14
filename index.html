@@ -43,14 +43,14 @@ break;
 }
 }
 if (valid) {
-alert ("Login was sucessfully processed.  You will be redirected to the members page now.");
+alert ("accepted");
 window.location = "target.html";
 return false;
 }
 var t = " tries";
 if (count == 1) {t = " try"}
 if (count >= 1) {
-alert ("Invalid username and/or password.  You have " + count + t + " left.");
+alert ("wrong.  You have " + count + t + " left.");
 document.myform.username.value = "";
 document.myform.pword.value = "";
 setTimeout("document.myform.username.focus()", 25);
@@ -58,8 +58,8 @@ setTimeout("document.myform.username.select()", 25);
 count --;
 }
 else {
-alert ("Still incorrect! You have no more tries left!");
-document.myform.username.value = "No more tries allowed!";
+alert ("wrong");
+document.myform.username.value = "wrong";
 document.myform.pword.value = "";
 document.myform.username.disabled = true;
 document.myform.pword.disabled = true;
